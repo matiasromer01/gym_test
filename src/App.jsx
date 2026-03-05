@@ -5,29 +5,30 @@ import {
   Route,
   Navigate
 } from 'react-router-dom';
-import ProfilePage from './pages/ProfilePage';
+import ProgressPage from './pages/ProgressPage';
 import './App.css'
-
+import ASidebar from './components/ASide.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
-  
   return (
     <Router>
-      <div className='App'>
-        <div className='content'>
+      <div className="App">      
+        <ASidebar />             
+        <div className="content">
           
           <Routes>
-            {/*Ruta principal-- profile  */}
-            <Route path="/" element={<ProfilePage />}/>
+            {/*Ruta principal-- progress  */}
+            
+            <Route path="/" element={<ProgressPage />}/>
+            <Route path="/progress" element={<ProgressPage />}/>
+          
           </Routes>
         </div>
       </div>
     </Router>
   )
-  
 }
-
 
 export default App

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
-import "./ProfilePic.css";
-import { IoCameraOutline } from "react-icons/io5";
+import styles from "./ProfilePic.module.css";
+import { IoCameraOutline, IoPersonOutline } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
+
 
 
 const ProfilePic = ({ imageUrl }) => {
@@ -23,9 +25,9 @@ const ProfilePic = ({ imageUrl }) => {
     };
 
     return (
-        <div className="profile-container">
+        <div className={styles['profile-container']}>
             <div
-                className="image-wrapper"
+                className={styles['image-wrapper']}
                 onClick={handleImageClick}
                 style={{ cursor: 'pointer' }}
             >
@@ -33,13 +35,15 @@ const ProfilePic = ({ imageUrl }) => {
                     <img
                         src={uploadedImage}
                         alt=""
-                        className="profile-img"
+                        className={styles['profile-img']}
                     />
                 ) : (
-                    <div className="placeholder-icon">👤</div>
+                    <div className={styles['placeholder-icon']}>
+                        <CgProfile size={60} color="rgba(255, 255, 255, 0.6)" />
+                    </div>
                 )}
-                <div className="overlay-hover">
-                    <div className="camera-icon">
+                <div className={styles['overlay-hover']}>
+                    <div className={styles['camera-icon']}>
                         <IoCameraOutline size={28} color="white" />
                     </div>
                 </div>
