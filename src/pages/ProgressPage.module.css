@@ -1,0 +1,78 @@
+.dashboard {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.mainPanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow-y: auto;
+    min-width: 0;
+    padding-right: 0.25rem;
+}
+
+.mainPanel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mainPanel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mainPanel::-webkit-scrollbar-thumb {
+    background: rgba(142, 132, 255, 0.3);
+    border-radius: 2px;
+}
+
+.sidePanel {
+    width: 268px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow-y: auto;
+}
+
+.sidePanel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidePanel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidePanel::-webkit-scrollbar-thumb {
+    background: rgba(142, 132, 255, 0.3);
+    border-radius: 2px;
+}
+
+.header {
+    padding-bottom: 0.25rem;
+}
+
+.greeting {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.subgreeting {
+    color: #b0b0cc;
+    margin: 0.3rem 0 0;
+    font-size: 0.88rem;
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}

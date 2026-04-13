@@ -1,8 +1,6 @@
 .asidebar {
     background: rgba(15, 12, 41, 0.7);
-    /* Fondo sólido oscuro para la barra */
     backdrop-filter: blur(10px);
-    /* Efecto vidrio esmerilado */
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -26,12 +24,74 @@
     background: var(--btn-bg-hover);
     color: var(--text-main);
     transform: translateX(5px);
-    /* Pequeño movimiento feedback */
+
 }
 
-/* Cuando el botón está activo/seleccionado */
+
 .menuItem.active {
     background: var(--btn-active);
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menuItem span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+.nameInput {
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    text-align: center;
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+
+
+/* Button Name */
+
+.inputGroup{
+    display: flex;
+    text-align: center;
+}
+
+
+.input {
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid hsl(236, 92%, 66%);
+    outline: none;
+    transition: 200ms ease-in;
+    padding-left: 1rem;
+    display: flex;
+    text-align: center;
+}
+
+.input:focus {
+    border-bottom: 4px solid hsl(236, 92%, 66%);
+    padding-top: 2px;
+}
+
+.input::placeholder {
+    color: hsl(236, 92%, 66%);
+    opacity: 0.5;
 }
